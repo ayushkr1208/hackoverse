@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Selection Form</title>
+    <style>
+    body {
+        overflow:scroll;
+    font-family: Arial, sans-serif;
+    height:100vh;
+    background-color: #f5f5f5;
+    background-image: url("https://img.freepik.com/free-vector/medical-healthcare-background-with-cardiograph-line_1017-25757.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    border:2px solid rgb(161, 161, 161);
+    background-color: rgba(0, 121, 121, 0.8) ;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width:400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.disease-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+label:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <h2>Select Disease</h2>
+            <div class="disease-list">
+                <input type="checkbox" id="disease1" name="disease" value="Cancer">
+                <label for="disease1"><input type="radio">&nbsp;&nbsp;&nbsp;Cancer</label><br>
+                <input type="checkbox" id="disease2" name="disease" value="Diabetes">
+                <label for="disease2"><input type="radio">&nbsp;&nbsp;&nbsp;Diabetes</label><br>
+                <input type="checkbox" id="disease3" name="disease" value="Heart Disease">
+                <label for="disease3"><input type="radio">&nbsp;&nbsp;&nbsp;Heart Disease</label><br>
+                <input type="checkbox" id="disease4" name="disease" value="Asthma">
+                <label for="disease4"><input type="radio">&nbsp;&nbsp;&nbsp;Asthma</label><br>
+                <input type="checkbox" id="disease5" name="disease" value="Arthritis">
+                <label for="disease5"><input type="radio">&nbsp;&nbsp;&nbsp;Arthritis</label><br>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

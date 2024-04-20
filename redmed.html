@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Webpage</title>
+    <style>
+        body {
+            overflow-y: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #004953; /* Background color */
+            color: #fff; /* Text color */
+            background-image: url('background.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-image: url("https://img.freepik.com/free-vector/medical-healthcare-background-with-cardiograph-line_1017-25757.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: rgba(0, 121, 121, 0.8); /* Semi-transparent background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border: 2px solid rgb(161, 161, 161);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+            margin-bottom:200px;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Increase box shadow on hover */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transition for button color change */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            background-color: #0056b3;
+            transform: translateY(1px); /* Add slight downward movement on button click */
+        }
+
+        h2 {
+            margin-bottom: 10px; /* Add spacing between heading and button */
+        }
+
+        /* Animation for button hover effect */
+        @keyframes buttonHover {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-2px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        button:hover {
+            animation: buttonHover 0.3s ease; /* Apply hover animation */
+        }
+
+        /* Animation for rotating icon */
+        @keyframes rotateIcon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate-icon {
+            animation: rotateIcon 2s linear infinite; /* Apply rotation animation */
+        }
+        #img2
+        {
+            height:100px;
+            width:100px;
+            border-radius:50%;
+            border:2px solid black;
+            position:relative;
+            left:30px;
+            top:20px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img2" src="logo.png">
+    <div class="container">
+        <div class="box">
+            <h2>Health Checkup Registration</h2>
+            <a href="index1.html" target="_blank"><button id="checkupBtn">Register Now</button></a>
+        </div>
+        <div class="box">
+            <h2>Know your Medication</h2>
+            <a href="disease.html" target="_blank"><button id="medicationBtn">Select Medication</button></a>
+        </div>
+    </div>
+</body>
+</html>

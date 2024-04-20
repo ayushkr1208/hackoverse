@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height:100vh;
+            background-color: #f5f5f5; /* Background color */
+            background-image: url("https://img.freepik.com/free-vector/medical-healthcare-background-with-cardiograph-line_1017-25757.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: rgba(0, 121, 121, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+            backdrop-filter:blur(100px);
+            border:2px solid rgb(161, 161, 161);
+        }
+
+        .tick-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .tick {
+            font-size: 80px;
+            color: #4caf50; /* Tick color */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0) rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+            animation: tickAnimation 1s ease forwards;
+        }
+
+        .success-message {
+            color: #000000; /* Success message color */
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            opacity: 2;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .thank-you {
+            color: #000000; /* Thank you message color */
+            font-size: 18px;
+            opacity: 2;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .box:hover .success-message {
+            opacity: 2;
+        }
+
+        .box:hover .thank-you {
+            opacity: 2;
+        }
+
+        @keyframes tickAnimation {
+            0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) scale(1.5) rotate(180deg); }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="tick-container">
+                <div class="tick">&#10003;</div>
+            </div>
+            <p class="success-message">Registration Successful!</p>
+            <p class="thank-you">Thank you for registering!</p>
+        </div>
+    </div>
+</body>
+</html>
